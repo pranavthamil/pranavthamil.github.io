@@ -1,0 +1,118 @@
+/* 1. Custom font & basic setup */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #f8faff; /* light blue-gray background */
+  color: #1e293b; /* dark slate text */
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* 2. Header styling */
+header {
+  background-color: #1d4ed8; /* royal blue */
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 4px solid #0f172a;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* 3. Navigation bar styling */
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #f1f5f9;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #ffcc00; /* gold on hover */
+}
+
+/* 4. Main content */
+main {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+main p {
+  font-size: 18px;
+  color: #334155;
+}
+
+/* 5. Image styling (general fallback) */
+img {
+  display: block;
+  margin: 30px auto;
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  border: 3px solid #1d4ed8;
+}
+
+/* 6. Side-by-side layout for main and image */
+.main-container {
+  display: flex;              /* side-by-side layout */
+  align-items: center;        /* vertical alignment */
+  justify-content: center;    /* centers horizontally */
+  gap: 30px;                  /* space between text and image */
+  padding: 40px;
+}
+
+.main-container main {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+}
+
+.main-container img {
+  width: 250px;
+  height: auto;
+  border-radius: 50%;         /* circular photo */
+  border: 4px solid #1d4ed8;
+}
+
+/* 7. Responsive design */
+@media (max-width: 900px) {
+  .main-container {
+    flex-direction: column;   /* stack vertically on smaller screens */
+    text-align: center;
+  }
+
+  .main-container img {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 5px 10px;
+  }
+
+  main {
+    margin: 20px;
+    padding: 15px;
+  }
+}
